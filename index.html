@@ -47,6 +47,14 @@
                 return 'Invalid input!'
             }
         }
+        function playGame(){
+            for (let i = 0; i < 5; i++){
+                let playerSelection = prompt("Pick Rock, Paper, or Scissors:");
+                result = playRound(playerSelection, getComputerChoice());
+                alert(result);
+            }
+        }
+        playGame();
 
         
 
