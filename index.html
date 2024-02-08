@@ -14,7 +14,40 @@
             return moves[choice];
         }
         
-        let getComputerChouce = getChoice();
+        let getComputerChoice = getChoice;
+
+        let getPlayerChoice = getChoice;
+
+        function playRound(playerSelection, computerSelection){
+            playerSelection = playerSelection.toLowerCase();
+            computerSelection = computerSelection.toLowerCase();
+
+            if (playerSelection === computerSelection){
+                return `Draw! ${playerSelection} is the same as ${computerSelection}`
+            }
+            else if (playerSelection == "rock" && computerSelection == "paper"){
+                return `You Lose! ${computerSelection} beats ${playerSelection}`
+            }
+            else if (playerSelection == "paper" && computerSelection == "rock"){
+                return `You Win! ${playerSelection} beats ${computerSelection}`
+            }
+            else if (playerSelection == "rock" && computerSelection == "scissors"){
+                return `You Win! ${playerSelection} beats ${computerSelection}`
+            }
+            else if (playerSelection == "scissors" && computerSelection == "rock"){
+                return `You Lose! ${computerSelection} beats ${playerSelection}`
+            }
+            else if (playerSelection == "paper" && computerSelection == "scissors"){
+                return `You Lose! ${computerSelection} beats ${playerSelection}`
+            }
+            else if (playerSelection == "scissors" && computerSelection == "paper"){
+                return `You Win! ${playerSelection} beats ${computerSelection}`
+            }
+            else{
+                return 'Invalid input!'
+            }
+        }
+
         
 
     </script>
